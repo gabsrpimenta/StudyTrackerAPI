@@ -6,6 +6,10 @@ public class User
     public string Nome { get; set; } = string.Empty;
     public string Email { get; set; } = string.Empty;
     public string Senha { get; set; } = string.Empty;
+    
+    // --- NOVAS COLUNAS PARA A SEQUÊNCIA (STREAK) ---
+    public int Streak { get; set; } = 0;
+    public string LastStudyDate { get; set; } = string.Empty;
 }
 
 public class StudyTask
@@ -49,8 +53,11 @@ public class StudySession
     public int Id { get; set; }
     public string Date { get; set; } = string.Empty;
     public int Minutes { get; set; }
+    
+    // --- NOVAS COLUNAS PARA O ESTUDO ---
+    public string Subject { get; set; } = string.Empty; // O que o aluno estudou (ex: Matemática)
+    public int UserId { get; set; } // De quem é este estudo? (Relacionamento com a tabela User)
 }
-
 
 public class Goal
 {
