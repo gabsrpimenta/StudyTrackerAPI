@@ -71,7 +71,6 @@ namespace StudyTrackerAPI.Controllers
                 }
             }
 
-            // CORRIGIDO AQUI: _context.Sessions
             _context.Sessions.Add(session);
             await _context.SaveChangesAsync();
 
